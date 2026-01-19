@@ -130,6 +130,8 @@ const expandedItems = ref({})
 const toggleExpand = (itemName) => {
   expandedItems.value[itemName] = !expandedItems.value[itemName]
 }
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -145,7 +147,7 @@ const toggleExpand = (itemName) => {
               <font-awesome-icon icon="bars" class="fs-4" />
             </button>
             <router-link class="navbar-brand d-flex align-items-center" to="/">
-              <img src="/logo.jpg" alt="Cake Box Cafe Logo" style="height: 40px; width: auto; object-fit: contain;" class="me-2" />
+              <img :src="`${baseUrl}logo.jpg`" alt="Cake Box Cafe Logo" style="height: 40px; width: auto; object-fit: contain;" class="me-2" />
               <span class="fw-bold fs-5 d-none d-sm-inline" style="color: var(--bakery-dark); letter-spacing: -0.5px;">CAKE BOX CAFE</span>
             </router-link>
           </div>

@@ -1,13 +1,15 @@
 <script setup>
 import { ref } from 'vue'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const specialties = [
   {
     id: 1,
     name: 'Artisan Croissant',
     description: 'Freshly baked every morning with 100% French butter.',
     price: '₹120',
-    image: '/croissant.png',
+    image: `${baseUrl}croissant.png`,
     icon: 'wheat-awn'
   },
   {
@@ -15,7 +17,7 @@ const specialties = [
     name: 'Rustic Sourdough',
     description: 'Naturally fermented for 24 hours for that perfect tang and crust.',
     price: '₹180',
-    image: '/sourdough.png',
+    image: `${baseUrl}sourdough.png`,
     icon: 'bread-slice'
   },
   {
@@ -23,7 +25,7 @@ const specialties = [
     name: 'Celebration Cakes',
     description: 'Custom designs for your most special moments.',
     price: 'From ₹800',
-    image: '/cake.png',
+    image: `${baseUrl}cake.png`,
     icon: 'cake-candles'
   }
 ]
